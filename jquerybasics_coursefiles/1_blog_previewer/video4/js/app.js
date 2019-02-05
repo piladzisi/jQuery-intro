@@ -12,8 +12,6 @@
 // const content = "This is my first post";
 $('#flashMessage').hide();
 
-
-
 $('#previewButton').click(function(){
 	const title = $('#blogTitleInput').val();
 	const content = $('#blogContentInput').val();
