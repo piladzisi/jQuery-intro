@@ -6,9 +6,10 @@ $('.spoiler').append($button);
 
 
 $('.spoiler span').hide();
-$('.spoiler button').click(function(){
-	$('.spoiler span').show();
-	$('.spoiler button').hide();
+
+$('.spoiler').on('click', 'button', function(e){
+	$(this).prev().show();
+	$(e.target).hide();	
 });
 
 
