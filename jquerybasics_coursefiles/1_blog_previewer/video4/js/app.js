@@ -3,17 +3,27 @@
 // $('#flashMessage').delay(3000);
 // $('#flashMessage').slideUp();
 
-$('#flashMessage')
-	.hide()
-	.slideDown(1000)
-	.delay(3000)
-	.slideUp();
 
-$('.blogPage-title').text();
-$('.blogNewPost').html();
 
-const title = "My First Blog Post";
+// $('.blogPage-title').text();
+// $('.blogNewPost').html();
+
+// const title = "My First Blog Post";
 // const content = "This is my first post";
+$('#flashMessage').hide();
 
-$('#blogTitlePreview').text(title);
-$('#blogContentPreview').html("This is my <strong>first</strong> post");
+
+
+$('#previewButton').click(function(){
+	const title = $('#blogTitleInput').val();
+	const content = $('#blogContentInput').val();
+	$('#blogTitlePreview').text(title);
+	$('#blogContentPreview').html(content);
+
+	$('#flashMessage')
+		.hide()
+		.slideDown(1000)
+		.delay(3000)
+		.slideUp();
+})
+
